@@ -1,4 +1,4 @@
-export default [
+const Words = [
   "ASCII",
   "Abart",
   "Abbau",
@@ -20,7 +20,6 @@ export default [
   "Adels",
   "Adler",
   "Adobe",
-  "Adolf",
   "Adria",
   "Affen",
   "After",
@@ -3366,3 +3365,5 @@ export default [
   "zwist",
   "zyste",
 ];
+
+export default Words;
