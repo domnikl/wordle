@@ -1,0 +1,19 @@
+.Trials-trials {
+  padding: 20px;
+}
+
+.Trials-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.Trials-char {
+  padding: 5px;
+  border: 1px solid black;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  vertical-align: middle;
+}

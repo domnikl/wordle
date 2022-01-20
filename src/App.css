@@ -1,0 +1,10 @@
+.App {
+  min-width: 300px;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.App-header {
+  text-align: center;
+}
