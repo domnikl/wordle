@@ -19,21 +19,21 @@ function Keyboard(props: KeyboardProps) {
 
   function handleKeydown(e: KeyboardEvent) {
     if (e.key === "Backspace") {
-      handleOnClick(KEY_DELETE);
+      handleInput(KEY_DELETE);
     } else {
-      handleOnClick(e.key);
+      handleInput(e.key);
     }
   }
 
   useEventListener("keydown", handleKeydown);
 
-  function handleOnClick(key: string) {
+  function handleInput(key: string) {
     if (key === "⌫") {
       props.onKeyDown(KEY_DELETE);
     } else if (key === "Enter") {
       props.onKeyDown(KEY_ENTER);
-    } else {
-      props.onKeyDown(key);
+    } else if (keys.flat().includes(key.toUpperCase())) {
+      props.onKeyDown(key.toUpperCase());
     }
   }
 
@@ -58,7 +58,7 @@ function Keyboard(props: KeyboardProps) {
             <div
               className={keyClass2(key)}
               key={key}
-              onClick={() => handleOnClick(key)}
+              onClick={() => handleInput(key)}
             >
               {key}
             </div>
