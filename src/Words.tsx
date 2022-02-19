@@ -1069,6 +1069,6 @@ const Words = [
   "dogma",
   "adler",
   "zeche",
-];
+].map((w) => w.toUpperCase());
 
 export default Words;

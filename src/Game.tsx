@@ -42,6 +42,12 @@ function Game() {
     } else if (key === KEY_ENTER) {
       if (trials[round].length < 5) return;
 
+      if (!Words.includes(trials[round])) {
+        // Word not allowed!
+        console.log("Not in word list!");
+        return;
+      }
+
       const results = evaluate(word, trials[round]);
 
       setNotUsed([...notUsed, ...results.notUsed]);
