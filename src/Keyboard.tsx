@@ -28,7 +28,7 @@ function Keyboard(props: KeyboardProps) {
   useEventListener("keydown", handleKeydown);
 
   function handleInput(key: string) {
-    if (key === "⌫") {
+    if (key === "⌫" || key === KEY_DELETE) {
       props.onKeyDown(KEY_DELETE);
     } else if (key === "Enter") {
       props.onKeyDown(KEY_ENTER);
