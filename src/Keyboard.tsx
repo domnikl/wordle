@@ -18,7 +18,7 @@ function Keyboard(props: KeyboardProps) {
   ];
 
   function handleKeydown(e: KeyboardEvent) {
-    if (e.key === "Backspace") {
+    if (e.key === "Backspace" || e.key === "Delete") {
       handleInput(KEY_DELETE);
     } else {
       handleInput(e.key);
