@@ -1,5 +1,6 @@
 import "./Keyboard.css";
 import { CorrectPosition, keyClass } from "./CssPositionClasses";
+import { useEventListener } from "./useEventListener";
 
 interface KeyboardProps {
   usedCorrectPosition: CorrectPosition[];
@@ -15,6 +16,16 @@ function Keyboard(props: KeyboardProps) {
     ["A", "S", "D", "F", "G", "H", "J", "K", "L", "Ö", "Ä"],
     ["Y", "X", "C", "V", "B", "N", "M", "Enter", "⌫"],
   ];
+
+  function handleKeydown(e: KeyboardEvent) {
+    if (e.key === "Backspace") {
+      handleOnClick(KEY_DELETE);
+    } else {
+      handleOnClick(e.key);
+    }
+  }
+
+  useEventListener("keydown", handleKeydown);
 
   function handleOnClick(key: string) {
     if (key === "⌫") {
